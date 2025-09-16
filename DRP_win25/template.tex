@@ -1,0 +1,218 @@
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{cancel}
+\usepackage{bbding}
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+%\usepackage{psfig}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{tikz, tikz-cd}
+\usepackage{mathrsfs} 
+\usetikzlibrary{intersections,positioning}
+\usepackage{physics}
+\usetikzlibrary{positioning, arrows}
+\usetikzlibrary{decorations.pathmorphing, patterns, decorations, decorations.pathreplacing}
+\usetikzlibrary{calc}
+
+\newcommand{\handout}[6]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf } \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #6  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+      %\vspace{2mm}
+      %\hbox to 5.78in { {\em \hfill #5} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\set}[1]{\left\{#1 \right\}}
+
+\newcommand{\wrap}[1]{\left( #1 \right )}
+\newcommand{\bracket}[1]{\left[ #1 \right ]}
+
+
+\newcommand{\lecture}[5]{\handout{#1}{#2}{#3}{#4}{#5}{#1}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{property}{Property}
+\newtheorem{claim}[theorem]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\newtheorem*{example*}{Example}
+\newtheorem*{exercise*}{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{note}[theorem]{Note}
+\newtheorem{observation}{Observation}
+
+
+
+% 1-inch margins, from fullpage.sty by H.Partl, Version 2, Dec. 15, 1988.
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+\usepackage{enumitem}
+\setlist{itemsep=0pt}
+%\renewcommand{\baselinestretch}{1.25}
+
+\newcommand{\OPT}{\mathrm{OPT}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\depth}{\mathrm{depth}}
+\newcommand{\dist}{\mathrm{dist}}
+
+\newcommand{\stpath}{s\text{-}t}
+\newcommand{\ow}{\textrm{o.w.}}
+
+\newcommand{\LP}{\textrm{LP}}
+\newcommand{\ILP}{\textrm{ILP}}
+\newcommand{\ex}{\textbf{ Ex. }}
+
+\usepackage{mdframed}
+\usepackage{comment}
+%\usepackage[noend]{algpseudocode}
+\usepackage{algpseudocode}
+%\usepackage{varwidth}
+%\newcommand{\MyComment}[1]{}
+
+%\usepackage{clrscode3e}
+\newcommand{\id}[1]{\mathit{#1}}
+\newcommand{\ignore}[1]{}
+\newtheorem{invariant}{Invariant}
+%\newtheorem*{observation}{Observation}
+\newtheorem{remark}{Remark}
+
+
+\usepackage{tabularx}
+\usepackage{subfig}
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{ifthen}
+\usetikzlibrary{calc}
+
+\usepackage{comment}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0pt}
+\usepackage{array}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Grading Rubrics
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{etoolbox}
+
+\newtoggle{grader}
+%\toggletrue{grader}
+
+\mdfdefinestyle{rubric}{frametitle=Grading Rubrics,%
+frametitlebackgroundcolor=red!60!black,%
+frametitlefont=\normalsize\bfseries\fontfamily{phv}\selectfont\color{white},%
+roundcorner=10pt,%
+backgroundcolor=red!10,
+linecolor=red!60!black,
+linewidth=2pt,
+}
+
+
+\newenvironment{rubrics}
+{%
+\begin{mdframed}[style=rubric]
+\fontfamily{phv}\selectfont
+\begin{itemize}
+}
+{%
+\end{itemize}
+\end{mdframed}
+}
+
+
+\def\dist{\operatorname{dist}}
+\def\OPT{\operatorname{OPT}}
+\def\OR\mathrm{OR}
+\def\AND\mathrm{AND}
+
+\newcommand{\OPTOUT}{\operatorname{OPT}_{\text{out}}}
+\newcommand{\OPTIN}{\operatorname{OPT}_{\text{in-or-out}}}
+
+            
+% SPACING    
+\newcommand{\vcm}[1][1]{\vspace*{#1 cm}}
+\newcommand{\hcm}[1][1]{\hspace*{#1 cm}}
+\newcommand{\rb}[2]{\raisebox{#1 mm}[0mm][0mm]{#2}}
+\newcommand{\istrut}[2][0]{\rule[- #1 mm]{0mm}{#1 mm}\rule{0mm}{#2 mm}}
+\newcommand{\zeromath}[1]{\makebox[0mm][l]{$#1$}}
+\newcommand{\zero}[1]{\makebox[0mm][r]{#1}}
+
+% MATH
+\newcommand{\PP}{{\mathbb P\/}}
+\newcommand{\A}{{\mathbb A\/}}
+\newcommand{\N}{{\mathbb N\/}}
+\newcommand{\Z}{{\mathbb Z\/}}
+\newcommand{\C}{{\mathbb C\/}}
+\newcommand{\Q}{{\mathbb Q\/}}
+\newcommand{\R}{{\mathbb R\/}}
+\newcommand{\E}{{\mathbb E\/}}
+\newcommand{\V}{{\mathbb V\/}}
+\newcommand{\K}{{\mathbb K\/}}
+\newcommand{\un}[1]{\underline{#1}}
+\newcommand{\paren}[1]{{\left( #1 \right)}}
+\newcommand{\bigparen}[1]{\big( #1 \big)}
+\newcommand{\biggparen}[1]{\bigg( #1 \bigg)}
+\newcommand{\angbrack}[1]{\left< #1 \right>}
+\newcommand{\Angbrack}[1]{\Big< #1 \Big>}
+\newcommand{\curlybrack}[1]{\left\{ #1 \right\}}
+\newcommand{\bigcurly}[1]{\big\{ #1 \big\}}
+\newcommand{\biggcurly}[1]{\bigg\{ #1 \big\}}
+\newcommand{\sqbrack}[1]{\left[ #1 \right]}
+\newcommand{\SqBrack}[1]{\Big[ #1 \Big]}
+\newcommand{\SQBrack}[1]{\bigg[ #1 \bigg]}
+\newcommand{\Paren}[1]{\Big( #1 \Big)}
+\newcommand{\PAREN}[1]{\bigg( #1 \bigg)}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\f}[2]{\frac{#1}{#2}}
+\newcommand{\fr}[2]{\mbox{$\frac{#1}{#2}$}}
+\newcommand{\modulo}{ {\mbox{ \rm mod } }}
+\newcommand{\logstar}{{\log^*}}
+\newcommand{\bydef}{\stackrel{\operatorname{def}}{=}}
+\newcommand{\poly}{\operatorname{poly}}
+\newcommand{\polylog}{\operatorname{polylog}}
+\newcommand{\bottom}{\perp}
+\newcommand{\hookuparrow}{\mathrel{\rotatebox[origin=c]{90}{$\hookrightarrow$}}}
+\newcommand{\hookdownarrow}{\mathrel{\rotatebox[origin=c]{-90}{$\hookrightarrow$}}}
